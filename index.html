@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scroll</title>
+    <link rel="icon" type="image/png" href="Assets/emmanuel-jose.ico" />
+    <link rel="stylesheet" href="style.css" class="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <img src="images/bg.jpg" id="bg" alt="building skyline">
+        <img src="images/moon.png" id="moon" alt="full moon">
+        <img src="images/cloud1.png" id="cloud1" alt="clouds">
+        <img src="images/cloud2.png" id="cloud2" alt="clouds">
+        <img src="images/jet.png" id="jet" alt="flying Avengers jet">
+        <img src="images/ironman01.png" id="ironman" alt="flying ironman">
+    </section>
+
+    <div class="sec">
+        <div class="content">
+            <h2>
+                <span id="text">I AM IRON MAN</span>
+            </h2>
+            <p>
+                <span id="text">Everybody wants a happy ending, right? But it doesn't always roll that way. Maybe this
+                    time. I'm hoping if
+                    you play this
+                    back... it's in celebration. I hope families are reunited. I hope we get it back and something like
+                    a normal version
+                    of
+                    the planet has been restored, if there ever was such a thing.</span>
+            </p>
+            <br>
+            <p>
+                <span id="text">God, what a world. Universe now. If you told me ten years ago that we weren't alone, let
+                    alone you know to
+                    this extent...
+                    I mean, I wouldn't have been surprised. But come on, you know. That epic forces of darkness and
+                    light that have come
+                    into play. And for better or worse, that's the reality Morgan's gonna have to find a way to grow up
+                    in. So I thought
+                    I better record a little greeting, in the case of an untimely death, on my part. Not that death at
+                    any time is ever
+                    timely.</span>
+            </p>
+            <br>
+            <p>
+                <span id="text">This time travel thing that we're gonna try and pull off tomorrow... it's got me
+                    scratching my head about
+                    the survivability
+                    of all this. But then again that's the hero gig. Part of the journey is the end. What am I even
+                    tripping for?
+                    Everything is
+                    going to work out exactly the way it's supposed to.</span>
+            </p>
+            <br>
+            <p>
+                <span id="last-line">I love you 3000.</span>
+            </p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Skyline zooms in
+        gsap.to("#bg", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 200,
+            scale: 1.5
+        })
+
+        // Moon sliding to the left and scaling up
+        gsap.to("#moon", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: -400,
+            scale: 2
+        })
+
+        // Cloud 1 sliding to the left
+        gsap.to("#cloud1", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: -400,
+        })
+
+        // Cloud 2 sliding to the right
+        gsap.to("#cloud2", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 300,
+        })
+
+        // Jet sliding to the lower right and scaling up
+        gsap.to("#jet", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 1500,
+            y: 200,
+            scale: 5
+        })
+
+        // Iron Man sliding up on y-axis, scaling and rotating to the left
+        gsap.to("#ironman", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 0,
+            y: -1600,
+            scale: 2,
+            rotate: -60
+        })
+
+    </script>
+</body>
+
+</html>
+
+<!-- Emmanuel Jose logo and favicon. © Emmanuel Jose. All Rights Reserved. -->
